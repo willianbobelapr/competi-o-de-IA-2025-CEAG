@@ -1,0 +1,34 @@
+ETAPAS PARA ESPECIALIZAÇÃO NA LINGUAGEM ESCOLHIDA
+Competição de Programação 2025 - CEAG
+
+As atividades abaixo devem ser realizadas na linguagem escolhida pelo aluno. Todas as etapas são compatíveis com Java, JavaScript, C#, p5.js e Python.
+
+1. OLÁ, MUNDO!
+- Escreva um programa que exiba a mensagem "Olá, Mundo!" na tela.
+
+2. ENTRADA E SAÍDA DE DADOS
+- Crie um programa que solicite ao usuário seu nome e idade, e exiba uma mensagem personalizada de boas-vindas.
+
+3. OPERAÇÕES BÁSICAS
+- Desenvolva um programa que leia dois números e mostre a soma, subtração, multiplicação e divisão entre eles.
+
+4. ESTRUTURAS CONDICIONAIS
+- Faça um programa que leia um número e informe se ele é par ou ímpar.
+
+5. ESTRUTURAS DE REPETIÇÃO
+- Escreva um programa que exiba os números de 1 a 10 utilizando uma estrutura de repetição (laço/loop).
+
+6. LISTAS/VETORES
+- Crie um programa que leia 5 números e armazene em uma lista (ou vetor), depois exiba todos os números digitados.
+
+7. FUNÇÕES/PROCEDIMENTOS
+- Implemente uma função que receba um número e retorne o dobro desse número. Mostre o resultado na tela.
+
+8. MINI-PROJETO TEMÁTICO
+- Proponha um pequeno projeto relacionado ao tema "Como a comida do campo chega à cidade" ou "Alimentação Saudável". Exemplos:
+  • Calculadora de consumo de frutas e verduras
+  • Simulador de transporte de alimentos do campo para a cidade
+  • Quiz sobre alimentação saudável
+  • Visualização gráfica de dados sobre produção agrícola (pode ser simples)
+
+Essas etapas ajudarão você a se familiarizar com a linguagem escolhida e a desenvolver habilidades essenciais para a competição! 
