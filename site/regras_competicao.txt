@@ -7,37 +7,44 @@ Ensino Médio Profissional - Análise de Projeto de Sistemas
 
 2. ESCOLHA DA LINGUAGEM
 - Cada aluno deve escolher UMA das linguagens apresentadas no site (Java, JavaScript, C#, p5.js ou Python) para se especializar durante a competição.
-- A escolha deve ser comunicada ao professor até o início de outubro.
+- A escolha deve ser comunicada ao professor.
 
-3. PERÍODO DA COMPETIÇÃO
+3. TEMA OBRIGATÓRIO
+- O projeto deve obrigatoriamente abordar o tema do AGRINHO 2025:
+  • "Como a comida do campo chega à cidade"
+  • "Alimentação Saudável"
+- Os alunos devem explorar, em seus projetos, ideias, soluções ou reflexões relacionadas a esses temas.
+
+4. PERÍODO DA COMPETIÇÃO
 - A competição ocorrerá entre outubro e dezembro de 2025.
 
-4. DESAFIOS E PROJETOS
+5. DESAFIOS E PROJETOS
 - Serão propostos desafios e/ou projetos práticos para serem resolvidos utilizando a linguagem escolhida.
 - Os desafios podem envolver lógica, algoritmos, interfaces gráficas, criatividade e resolução de problemas reais.
 
-5. AVALIAÇÃO
+6. AVALIAÇÃO
 - Os projetos serão avaliados considerando:
   • Originalidade e criatividade
   • Funcionamento e correção
   • Clareza e organização do código
   • Apresentação do projeto
   • Uso adequado dos recursos da linguagem
+  • Adequação ao tema AGRINHO 2025
 
-6. APRESENTAÇÃO FINAL
+7. APRESENTAÇÃO FINAL
 - Cada aluno deverá apresentar seu projeto para a turma e para a banca avaliadora no final do período.
 - A apresentação pode incluir demonstração prática, explicação do código e dos desafios enfrentados.
 
-7. PREMIAÇÃO
+8. PREMIAÇÃO
 - Os melhores projetos de cada turma serão premiados com certificados e/ou brindes.
-- Haverá menção honrosa para destaques em criatividade, solução técnica e apresentação.
+- Haverá menção honrosa para destaques em criatividade, solução técnica, apresentação e abordagem do tema.
 
-8. CONDUTA
+9. CONDUTA
 - O trabalho deve ser individual, salvo indicação contrária do professor.
 - É permitido pesquisar, consultar materiais e pedir ajuda para dúvidas, mas o código final deve ser de autoria do aluno.
 - Plágio ou cópia de projetos prontos resultará em desclassificação.
 
-9. DÚVIDAS
+10. DÚVIDAS
 - Em caso de dúvidas, procure o professor responsável.
 
 Boa sorte a todos! Escolha sua linguagem, prepare-se e mostre seu talento! 
