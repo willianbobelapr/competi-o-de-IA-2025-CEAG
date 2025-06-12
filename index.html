@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Projetos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    .portal-container {
+      background: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.13);
+      padding: 3rem 2.5rem 2.5rem 2.5rem;
+      max-width: 420px;
+      width: 95vw;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #0057b7;
+      margin-bottom: 0.7em;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3em;
+      margin-top: 2em;
+    }
+    .link-card {
+      background: linear-gradient(90deg, #6ea8fe 0%, #e0eafc 100%);
+      border-radius: 1em;
+      padding: 1.2em 1em;
+      box-shadow: 0 2px 12px rgba(0,87,183,0.07);
+      text-decoration: none;
+      color: #003e8a;
+      font-size: 1.15rem;
+      font-weight: 600;
+      transition: transform 0.18s, box-shadow 0.18s;
+      display: block;
+    }
+    .link-card:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.18);
+      color: #0057b7;
+    }
+    .desc {
+      font-size: 1rem;
+      color: #444;
+      margin-top: 0.3em;
+      margin-bottom: 0.2em;
+      font-weight: 400;
+    }
+    @media (max-width: 600px) {
+      .portal-container {
+        padding: 1.2rem 0.5rem;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      .link-card {
+        font-size: 1rem;
+        padding: 0.9em 0.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="portal-container">
+    <h1>Portal de Projetos</h1>
+    <div class="links">
+      <a class="link-card" href="site/index.html" target="_blank">
+        Mini-site Linguagens & Competição
+        <div class="desc">Informações sobre linguagens de programação e regras da competição escolar.</div>
+      </a>
+      <a class="link-card" href="javascript/index.html" target="_blank">
+        Hello World Criativo
+        <div class="desc">Página "Hello World" com design moderno, minimalista e animado.</div>
+      </a>
+      <a class="link-card" href="in out/index.html" target="_blank">
+        In/Out - Exercícios e Exemplos
+        <div class="desc">Coleção de exercícios, exemplos e recursos para prática de programação.</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html> 
