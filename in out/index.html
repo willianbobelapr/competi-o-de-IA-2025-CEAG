@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo!</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255,255,255,0.9);
+            padding: 2rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            text-align: center;
+        }
+        input, button {
+            padding: 0.7rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            border: 1px solid #66a6ff;
+            font-size: 1rem;
+        }
+        button {
+            background: #66a6ff;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #89f7fe;
+            color: #333;
+        }
+        .welcome {
+            margin-top: 1.5rem;
+            font-size: 1.3rem;
+            animation: fadeIn 1.2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>👋 Olá! Vamos nos conhecer?</h2>
+        <form id="userForm">
+            <input type="text" id="nome" placeholder="Digite seu nome" required /> <br />
+            <input type="number" id="idade" placeholder="Digite sua idade" min="1" required /> <br />
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="welcome" id="welcomeMsg"></div>
+    </div>
+    <script>
+        const form = document.getElementById('userForm');
+        const welcomeMsg = document.getElementById('welcomeMsg');
+        const frases = [
+            'Que bom te ver por aqui, {nome}! {idade} anos de pura energia! 🚀',
+            'Bem-vindo(a), {nome}! {idade} anos e já brilhando muito! ✨',
+            'Olá, {nome}! Com {idade} anos, o mundo é seu! 🌎',
+            '{nome}, {idade} anos de histórias incríveis! Seja muito bem-vindo(a)! 🎉',
+            'Uau, {nome}! {idade} anos e cheio(a) de sonhos! Bem-vindo(a)! 🌟'
+        ];
+        form.onsubmit = function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value.trim();
+            const idade = document.getElementById('idade').value.trim();
+            if(nome && idade) {
+                let frase = '';
+                const idadeNum = Number(idade);
+                if(idadeNum > 90) {
+                    frase = `Uau, ${nome}! ${idade} anos de histórias, sorrisos e aprendizados. Dizem que a vida começa aos 40, mas você já está na segunda temporada! Que privilégio carregar tantas memórias e experiências. Que venham mais capítulos incríveis! 🌟📖`;
+                } else if(idadeNum > 70) {
+                    frase = `Que incrível, ${nome}! Com mais de ${idade} anos, aposto que aos 10 você se divertia com brincadeiras saudáveis como soltar pipa, jogar bola na rua ou brincar de esconde-esconde até o pôr do sol. Que tempos bons! 😊`;
+                } else if(idadeNum > 30) {
+                    frase = `Poxa, ${nome}... Com mais de ${idade} anos, já pensou em como teria sido diferente se tivesse comprado Bitcoin aos 9? 😅 Quem diria, hein?`;
+                } else if(idadeNum >= 21 && idadeNum <= 30) {
+                    frase = `Ei, ${nome}! Com ${idade} anos, você já pode brindar legalmente em muitos países... Mas será que já fez uma viagem inesquecível? ✈️🍹`;
+                } else if(idadeNum >= 18 && idadeNum < 21) {
+                    frase = `${nome}, ${idade} anos! Já pode votar, dirigir e mudar o mundo! 🚗🗳️ Que tal começar hoje?`;
+                } else if(idadeNum === 15) {
+                    frase = `Parabéns, ${nome}! 15 anos é uma idade mágica. Já pensou em como seria se você tivesse inventado o TikTok? 🎉📱`;
+                } else if(idadeNum === 10) {
+                    frase = `Uau, ${nome}! 10 anos! Se você tivesse criado o Minecraft, estaria milionário(a) agora! 🟩🟦`;
+                } else if(idadeNum < 10) {
+                    frase = `${nome}, com apenas ${idade} anos, o mundo está só começando pra você! Quem sabe você não inventa o próximo grande app? 🚀`;
+                } else {
+                    frase = frases[Math.floor(Math.random() * frases.length)]
+                        .replace('{nome}', nome)
+                        .replace('{idade}', idade);
+                }
+                welcomeMsg.innerHTML = frase;
+                form.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html> 
