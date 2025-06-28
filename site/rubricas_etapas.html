@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubricas por Etapa - Primeira Competição de Programação com IA CEAG 2025</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+            font-weight: 300;
+        }
+        
+        .header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .etapa-header {
+            background: #e3f2fd;
+            padding: 20px;
+            border-left: 5px solid #2196F3;
+        }
+        
+        .etapa-numero {
+            color: #1976D2;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .etapa-descricao {
+            color: #424242;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .student-info {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .field {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .field span {
+            font-weight: 600;
+            color: #333;
+            min-width: 70px;
+        }
+        
+        .field-line {
+            flex: 1;
+            border-bottom: 2px solid #333;
+            min-height: 18px;
+        }
+        
+        .rubric-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        
+        .rubric-table th,
+        .rubric-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .rubric-table th {
+            background: #E8F5E8;
+            font-weight: 600;
+            text-align: center;
+            color: #2e7d32;
+            font-size: 0.85rem;
+        }
+        
+        .criterio-cell {
+            background: #F0F8F0;
+            font-weight: 600;
+            width: 140px;
+            color: #388e3c;
+        }
+        
+        .nivel-cell {
+            width: 200px;
+            font-size: 0.8rem;
+            line-height: 1.3;
+        }
+        
+        .nivel1 { background: #FFEBEE; }
+        .nivel2 { background: #FFF3E0; }
+        .nivel3 { background: #E8F5E8; }
+        .nivel4 { background: #E3F2FD; }
+        
+        .desempenho-cell {
+            background: #F3E5F5;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .pontuacao-etapa {
+            background: #E8F5E8;
+            padding: 15px;
+            text-align: center;
+            border-top: 2px solid #4CAF50;
+        }
+        
+        .pontuacao-etapa strong {
+            color: #2e7d32;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #2196F3;
+        }
+        
+        .toc h2 {
+            color: #1976D2;
+            margin: 0 0 15px 0;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+        
+        .toc li {
+            padding: 8px 12px;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #4CAF50;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+        
+        .toc a:hover {
+            color: #1976D2;
+        }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; border-radius: 0; page-break-after: always; }
+            .toc { display: none; }
+        }
+        
+        @media (max-width: 768px) {
+            .student-info {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .rubric-table { font-size: 0.75rem; }
+            .nivel-cell { width: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="toc">
+        <h2>📋 Índice das Rubricas por Etapa</h2>
+        <ul>
+            <li><a href="#etapa1">Etapa 1: Olá, Mundo!</a></li>
+            <li><a href="#etapa2">Etapa 2: Entrada e Saída de Dados</a></li>
+            <li><a href="#etapa3">Etapa 3: Operações Básicas</a></li>
+            <li><a href="#etapa4">Etapa 4: Estruturas Condicionais</a></li>
+            <li><a href="#etapa5">Etapa 5: Estruturas de Repetição</a></li>
+            <li><a href="#etapa6">Etapa 6: Listas/Vetores</a></li>
+            <li><a href="#etapa7">Etapa 7: Funções/Procedimentos</a></li>
+            <li><a href="#etapa8">Etapa 8: Mini-Projeto Temático</a></li>
+        </ul>
+    </div>
+
+    <!-- ETAPA 1: OLÁ, MUNDO! -->
+    <div class="container" id="etapa1">
+        <div class="header">
+            <h1>Rubrica de Avaliação por Etapa</h1>
+            <p>Primeira Competição de Programação com IA CEAG 2025</p>
+        </div>
+        
+        <div class="etapa-header">
+            <div class="etapa-numero">ETAPA 1: OLÁ, MUNDO!</div>
+            <div class="etapa-descricao">
+                <strong>Objetivo:</strong> Escreva um programa que exiba a mensagem "Olá, Mundo!" na tela.
+            </div>
+        </div>
+        
+        <div class="student-info">
+            <div class="field">
+                <span>Estudante:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Turma:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Linguagem:</span>
+                <div class="field-line"></div>
+            </div>
+        </div>
+        
+        <table class="rubric-table">
+            <thead>
+                <tr>
+                    <th>Critérios</th>
+                    <th>Nível 1 (0-1 ponto)</th>
+                    <th>Nível 2 (2 pontos)</th>
+                    <th>Nível 3 (3 pontos)</th>
+                    <th>Nível 4 (4 pontos)</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="criterio-cell">Funcionamento</td>
+                    <td class="nivel-cell nivel1">Programa não executa ou apresenta muitos erros.</td>
+                    <td class="nivel-cell nivel2">Programa executa mas não exibe a mensagem corretamente.</td>
+                    <td class="nivel-cell nivel3">Programa executa e exibe "Olá, Mundo!" corretamente.</td>
+                    <td class="nivel-cell nivel4">Programa executa perfeitamente e pode incluir melhorias criativas.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Código</td>
+                    <td class="nivel-cell nivel1">Código muito confuso ou com sintaxe incorreta.</td>
+                    <td class="nivel-cell nivel2">Código funcional mas desorganizado ou difícil de ler.</td>
+                    <td class="nivel-cell nivel3">Código claro, bem estruturado e fácil de entender.</td>
+                    <td class="nivel-cell nivel4">Código exemplar, comentado e seguindo boas práticas.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Criatividade</td>
+                    <td class="nivel-cell nivel1">Implementação muito básica, apenas o mínimo necessário.</td>
+                    <td class="nivel-cell nivel2">Implementação padrão sem elementos adicionais.</td>
+                    <td class="nivel-cell nivel3">Adicionou elementos criativos como cores ou formatação.</td>
+                    <td class="nivel-cell nivel4">Implementação altamente criativa relacionada ao tema AGRINHO.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pontuacao-etapa">
+            <strong>Pontuação da Etapa 1:</strong> _____ / 12 pontos
+        </div>
+    </div>
+
+    <!-- ETAPA 2: ENTRADA E SAÍDA -->
+    <div class="container" id="etapa2">
+        <div class="etapa-header">
+            <div class="etapa-numero">ETAPA 2: ENTRADA E SAÍDA DE DADOS</div>
+            <div class="etapa-descricao">
+                <strong>Objetivo:</strong> Crie um programa que solicite ao usuário seu nome e idade, e exiba uma mensagem personalizada de boas-vindas.
+            </div>
+        </div>
+        
+        <div class="student-info">
+            <div class="field">
+                <span>Estudante:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Turma:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Linguagem:</span>
+                <div class="field-line"></div>
+            </div>
+        </div>
+        
+        <table class="rubric-table">
+            <thead>
+                <tr>
+                    <th>Critérios</th>
+                    <th>Nível 1 (0-1 ponto)</th>
+                    <th>Nível 2 (2 pontos)</th>
+                    <th>Nível 3 (3 pontos)</th>
+                    <th>Nível 4 (4 pontos)</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="criterio-cell">Entrada de dados</td>
+                    <td class="nivel-cell nivel1">Não consegue ler dados do usuário corretamente.</td>
+                    <td class="nivel-cell nivel2">Lê apenas um dos dados (nome OU idade).</td>
+                    <td class="nivel-cell nivel3">Lê nome e idade corretamente com instruções claras.</td>
+                    <td class="nivel-cell nivel4">Lê dados com validação e instruções muito claras.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Processamento</td>
+                    <td class="nivel-cell nivel1">Não utiliza os dados coletados adequadamente.</td>
+                    <td class="nivel-cell nivel2">Utiliza dados básicos mas sem personalização.</td>
+                    <td class="nivel-cell nivel3">Cria mensagem personalizada usando nome e idade.</td>
+                    <td class="nivel-cell nivel4">Mensagem rica e personalizada com lógica adicional.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Saída formatada</td>
+                    <td class="nivel-cell nivel1">Saída confusa ou mal formatada.</td>
+                    <td class="nivel-cell nivel2">Saída funcional mas básica.</td>
+                    <td class="nivel-cell nivel3">Saída bem formatada e apresentável.</td>
+                    <td class="nivel-cell nivel4">Saída profissional com elementos visuais.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pontuacao-etapa">
+            <strong>Pontuação da Etapa 2:</strong> _____ / 12 pontos
+        </div>
+    </div>
+
+    <!-- ETAPA 3: OPERAÇÕES BÁSICAS -->
+    <div class="container" id="etapa3">
+        <div class="etapa-header">
+            <div class="etapa-numero">ETAPA 3: OPERAÇÕES BÁSICAS</div>
+            <div class="etapa-descricao">
+                <strong>Objetivo:</strong> Desenvolva um programa que leia dois números e mostre a soma, subtração, multiplicação e divisão entre eles.
+            </div>
+        </div>
+        
+        <div class="student-info">
+            <div class="field">
+                <span>Estudante:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Turma:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Linguagem:</span>
+                <div class="field-line"></div>
+            </div>
+        </div>
+        
+        <table class="rubric-table">
+            <thead>
+                <tr>
+                    <th>Critérios</th>
+                    <th>Nível 1 (0-1 ponto)</th>
+                    <th>Nível 2 (2 pontos)</th>
+                    <th>Nível 3 (3 pontos)</th>
+                    <th>Nível 4 (4 pontos)</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="criterio-cell">Operações matemáticas</td>
+                    <td class="nivel-cell nivel1">Implementa apenas 1-2 operações ou com erros.</td>
+                    <td class="nivel-cell nivel2">Implementa 3 das 4 operações básicas corretamente.</td>
+                    <td class="nivel-cell nivel3">Implementa todas as 4 operações (soma, subtração, multiplicação, divisão).</td>
+                    <td class="nivel-cell nivel4">Todas as operações + tratamento de divisão por zero.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Validação</td>
+                    <td class="nivel-cell nivel1">Não trata entradas inválidas ou casos especiais.</td>
+                    <td class="nivel-cell nivel2">Tratamento básico de alguns casos especiais.</td>
+                    <td class="nivel-cell nivel3">Bom tratamento de entradas e casos especiais.</td>
+                    <td class="nivel-cell nivel4">Validação completa com mensagens de erro claras.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Apresentação dos resultados</td>
+                    <td class="nivel-cell nivel1">Resultados apresentados de forma confusa.</td>
+                    <td class="nivel-cell nivel2">Resultados básicos, mas compreensíveis.</td>
+                    <td class="nivel-cell nivel3">Resultados bem organizados e claros.</td>
+                    <td class="nivel-cell nivel4">Apresentação profissional com formatação exemplar.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pontuacao-etapa">
+            <strong>Pontuação da Etapa 3:</strong> _____ / 12 pontos
+        </div>
+    </div>
+
+    <!-- ETAPA 4: ESTRUTURAS CONDICIONAIS -->
+    <div class="container" id="etapa4">
+        <div class="etapa-header">
+            <div class="etapa-numero">ETAPA 4: ESTRUTURAS CONDICIONAIS</div>
+            <div class="etapa-descricao">
+                <strong>Objetivo:</strong> Faça um programa que leia um número e informe se ele é par ou ímpar.
+            </div>
+        </div>
+        
+        <div class="student-info">
+            <div class="field">
+                <span>Estudante:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Turma:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Linguagem:</span>
+                <div class="field-line"></div>
+            </div>
+        </div>
+        
+        <table class="rubric-table">
+            <thead>
+                <tr>
+                    <th>Critérios</th>
+                    <th>Nível 1 (0-1 ponto)</th>
+                    <th>Nível 2 (2 pontos)</th>
+                    <th>Nível 3 (3 pontos)</th>
+                    <th>Nível 4 (4 pontos)</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="criterio-cell">Lógica condicional</td>
+                    <td class="nivel-cell nivel1">Não implementa ou implementa incorretamente a lógica par/ímpar.</td>
+                    <td class="nivel-cell nivel2">Implementa lógica básica mas com alguns erros.</td>
+                    <td class="nivel-cell nivel3">Implementa corretamente a verificação par/ímpar.</td>
+                    <td class="nivel-cell nivel4">Lógica perfeita + funcionalidades adicionais (ex: números negativos).</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Estrutura do código</td>
+                    <td class="nivel-cell nivel1">Código desorganizado ou sintaxe incorreta.</td>
+                    <td class="nivel-cell nivel2">Código funcional mas com estrutura básica.</td>
+                    <td class="nivel-cell nivel3">Código bem estruturado usando if/else apropriadamente.</td>
+                    <td class="nivel-cell nivel4">Código exemplar, limpo e bem comentado.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Expansão criativa</td>
+                    <td class="nivel-cell nivel1">Apenas implementação básica sem melhorias.</td>
+                    <td class="nivel-cell nivel2">Pequenas melhorias na interface ou mensagens.</td>
+                    <td class="nivel-cell nivel3">Funcionalidades extras como múltiplas verificações.</td>
+                    <td class="nivel-cell nivel4">Extensão criativa relacionada ao tema AGRINHO (ex: classificar tipos de alimentos).</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pontuacao-etapa">
+            <strong>Pontuação da Etapa 4:</strong> _____ / 12 pontos
+        </div>
+    </div>
+
+    <!-- ETAPA 5: ESTRUTURAS DE REPETIÇÃO -->
+    <div class="container" id="etapa5">
+        <div class="etapa-header">
+            <div class="etapa-numero">ETAPA 5: ESTRUTURAS DE REPETIÇÃO</div>
+            <div class="etapa-descricao">
+                <strong>Objetivo:</strong> Escreva um programa que exiba os números de 1 a 10 utilizando uma estrutura de repetição (laço/loop).
+            </div>
+        </div>
+        
+        <div class="student-info">
+            <div class="field">
+                <span>Estudante:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Turma:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Linguagem:</span>
+                <div class="field-line"></div>
+            </div>
+        </div>
+        
+        <table class="rubric-table">
+            <thead>
+                <tr>
+                    <th>Critérios</th>
+                    <th>Nível 1 (0-1 ponto)</th>
+                    <th>Nível 2 (2 pontos)</th>
+                    <th>Nível 3 (3 pontos)</th>
+                    <th>Nível 4 (4 pontos)</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="criterio-cell">Implementação do loop</td>
+                    <td class="nivel-cell nivel1">Não usa loop ou implementa incorretamente.</td>
+                    <td class="nivel-cell nivel2">Usa loop mas com erros ou exibe números incorretos.</td>
+                    <td class="nivel-cell nivel3">Implementa loop corretamente exibindo números 1 a 10.</td>
+                    <td class="nivel-cell nivel4">Loop perfeito + permite personalizar intervalo (ex: 1 a N).</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Tipo de estrutura</td>
+                    <td class="nivel-cell nivel1">Não utiliza estrutura de repetição adequada.</td>
+                    <td class="nivel-cell nivel2">Utiliza estrutura básica (for simples).</td>
+                    <td class="nivel-cell nivel3">Demonstra compreensão clara da estrutura escolhida.</td>
+                    <td class="nivel-cell nivel4">Implementa múltiplos tipos (for, while) ou explica diferenças.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Aplicação temática</td>
+                    <td class="nivel-cell nivel1">Apenas números simples sem contexto.</td>
+                    <td class="nivel-cell nivel2">Adiciona descrições básicas aos números.</td>
+                    <td class="nivel-cell nivel3">Relaciona números com contexto temático (ex: dias de cultivo).</td>
+                    <td class="nivel-cell nivel4">Aplicação criativa do loop para simular processo agrícola.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pontuacao-etapa">
+            <strong>Pontuação da Etapa 5:</strong> _____ / 12 pontos
+        </div>
+    </div>
+
+    <!-- ETAPA 6: LISTAS/VETORES -->
+    <div class="container" id="etapa6">
+        <div class="etapa-header">
+            <div class="etapa-numero">ETAPA 6: LISTAS/VETORES</div>
+            <div class="etapa-descricao">
+                <strong>Objetivo:</strong> Crie um programa que leia 5 números e armazene em uma lista (ou vetor), depois exiba todos os números digitados.
+            </div>
+        </div>
+        
+        <div class="student-info">
+            <div class="field">
+                <span>Estudante:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Turma:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Linguagem:</span>
+                <div class="field-line"></div>
+            </div>
+        </div>
+        
+        <table class="rubric-table">
+            <thead>
+                <tr>
+                    <th>Critérios</th>
+                    <th>Nível 1 (0-1 ponto)</th>
+                    <th>Nível 2 (2 pontos)</th>
+                    <th>Nível 3 (3 pontos)</th>
+                    <th>Nível 4 (4 pontos)</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="criterio-cell">Manipulação de listas</td>
+                    <td class="nivel-cell nivel1">Não consegue criar ou manipular lista adequadamente.</td>
+                    <td class="nivel-cell nivel2">Cria lista e armazena alguns valores com dificuldades.</td>
+                    <td class="nivel-cell nivel3">Armazena e exibe os 5 números corretamente.</td>
+                    <td class="nivel-cell nivel4">Manipulação avançada com operações extras (soma, média, etc.).</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Entrada e validação</td>
+                    <td class="nivel-cell nivel1">Não valida entradas ou aceita dados incorretos.</td>
+                    <td class="nivel-cell nivel2">Validação básica de tipos de dados.</td>
+                    <td class="nivel-cell nivel3">Boa validação com instruções claras ao usuário.</td>
+                    <td class="nivel-cell nivel4">Validação robusta com tratamento de erros completo.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Saída organizada</td>
+                    <td class="nivel-cell nivel1">Exibe dados de forma confusa ou incompleta.</td>
+                    <td class="nivel-cell nivel2">Exibe dados básicos de forma compreensível.</td>
+                    <td class="nivel-cell nivel3">Apresentação clara e bem formatada dos números.</td>
+                    <td class="nivel-cell nivel4">Apresentação profissional com análise dos dados (maior, menor, etc.).</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pontuacao-etapa">
+            <strong>Pontuação da Etapa 6:</strong> _____ / 12 pontos
+        </div>
+    </div>
+
+    <!-- ETAPA 7: FUNÇÕES/PROCEDIMENTOS -->
+    <div class="container" id="etapa7">
+        <div class="etapa-header">
+            <div class="etapa-numero">ETAPA 7: FUNÇÕES/PROCEDIMENTOS</div>
+            <div class="etapa-descricao">
+                <strong>Objetivo:</strong> Implemente uma função que receba um número e retorne o dobro desse número. Mostre o resultado na tela.
+            </div>
+        </div>
+        
+        <div class="student-info">
+            <div class="field">
+                <span>Estudante:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Turma:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Linguagem:</span>
+                <div class="field-line"></div>
+            </div>
+        </div>
+        
+        <table class="rubric-table">
+            <thead>
+                <tr>
+                    <th>Critérios</th>
+                    <th>Nível 1 (0-1 ponto)</th>
+                    <th>Nível 2 (2 pontos)</th>
+                    <th>Nível 3 (3 pontos)</th>
+                    <th>Nível 4 (4 pontos)</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="criterio-cell">Definição da função</td>
+                    <td class="nivel-cell nivel1">Não consegue criar função ou apresenta erros de sintaxe.</td>
+                    <td class="nivel-cell nivel2">Cria função básica mas com implementação limitada.</td>
+                    <td class="nivel-cell nivel3">Função bem definida que calcula o dobro corretamente.</td>
+                    <td class="nivel-cell nivel4">Função exemplar com parâmetros bem definidos e documentada.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Chamada e uso</td>
+                    <td class="nivel-cell nivel1">Não consegue chamar a função adequadamente.</td>
+                    <td class="nivel-cell nivel2">Chama função mas não utiliza retorno corretamente.</td>
+                    <td class="nivel-cell nivel3">Chama função e exibe resultado adequadamente.</td>
+                    <td class="nivel-cell nivel4">Uso sofisticado com múltiplas chamadas ou teste de casos.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Expansão funcional</td>
+                    <td class="nivel-cell nivel1">Apenas implementação mínima sem melhorias.</td>
+                    <td class="nivel-cell nivel2">Pequenas melhorias na função original.</td>
+                    <td class="nivel-cell nivel3">Cria funções adicionais relacionadas (triplo, quadrado, etc.).</td>
+                    <td class="nivel-cell nivel4">Sistema de funções relacionadas ao tema AGRINHO (cálculos agrícolas).</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pontuacao-etapa">
+            <strong>Pontuação da Etapa 7:</strong> _____ / 12 pontos
+        </div>
+    </div>
+
+    <!-- ETAPA 8: MINI-PROJETO TEMÁTICO -->
+    <div class="container" id="etapa8">
+        <div class="etapa-header">
+            <div class="etapa-numero">ETAPA 8: MINI-PROJETO TEMÁTICO</div>
+            <div class="etapa-descricao">
+                <strong>Objetivo:</strong> Proponha um pequeno projeto relacionado ao tema "Como a comida do campo chega à cidade" ou "Alimentação Saudável".
+                <br><strong>Exemplos:</strong> Calculadora de consumo de frutas, Simulador de transporte, Quiz sobre alimentação, Visualização de dados agrícolas.
+            </div>
+        </div>
+        
+        <div class="student-info">
+            <div class="field">
+                <span>Estudante:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Turma:</span>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <span>Linguagem:</span>
+                <div class="field-line"></div>
+            </div>
+        </div>
+        
+        <table class="rubric-table">
+            <thead>
+                <tr>
+                    <th>Critérios</th>
+                    <th>Nível 1 (0-2 pontos)</th>
+                    <th>Nível 2 (3-4 pontos)</th>
+                    <th>Nível 3 (5-6 pontos)</th>
+                    <th>Nível 4 (7-8 pontos)</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="criterio-cell">Funcionalidade</td>
+                    <td class="nivel-cell nivel1">Projeto muito básico ou não funciona adequadamente.</td>
+                    <td class="nivel-cell nivel2">Projeto funcional mas com funcionalidades limitadas.</td>
+                    <td class="nivel-cell nivel3">Projeto bem desenvolvido com funcionalidades úteis.</td>
+                    <td class="nivel-cell nivel4">Projeto robusto com múltiplas funcionalidades integradas.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Conexão temática</td>
+                    <td class="nivel-cell nivel1">Pouca ou nenhuma conexão com tema AGRINHO.</td>
+                    <td class="nivel-cell nivel2">Conexão básica com temas de alimentação/agricultura.</td>
+                    <td class="nivel-cell nivel3">Boa integração com temas propostos.</td>
+                    <td class="nivel-cell nivel4">Conexão profunda e criativa com problemáticas reais do campo-cidade.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Interface/Usabilidade</td>
+                    <td class="nivel-cell nivel1">Interface confusa ou muito básica.</td>
+                    <td class="nivel-cell nivel2">Interface simples mas funcional.</td>
+                    <td class="nivel-cell nivel3">Interface bem projetada e fácil de usar.</td>
+                    <td class="nivel-cell nivel4">Interface profissional e experiência de usuário excelente.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Código e organização</td>
+                    <td class="nivel-cell nivel1">Código desorganizado, difícil de entender.</td>
+                    <td class="nivel-cell nivel2">Código funcional mas com organização básica.</td>
+                    <td class="nivel-cell nivel3">Código bem estruturado e comentado.</td>
+                    <td class="nivel-cell nivel4">Código exemplar seguindo boas práticas de programação.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Criatividade/Inovação</td>
+                    <td class="nivel-cell nivel1">Projeto muito básico sem elementos criativos.</td>
+                    <td class="nivel-cell nivel2">Alguns elementos criativos ou melhorias.</td>
+                    <td class="nivel-cell nivel3">Projeto original com ideias criativas.</td>
+                    <td class="nivel-cell nivel4">Altamente inovador com soluções únicas e criativas.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pontuacao-etapa">
+            <strong>Pontuação da Etapa 8:</strong> _____ / 40 pontos
+        </div>
+    </div>
+
+    <div style="background: #e8f5e8; padding: 20px; text-align: center; margin: 20px 0; border-radius: 10px;">
+        <h2 style="color: #2e7d32; margin: 0 0 10px 0;">📊 Pontuação Total das Etapas</h2>
+        <p style="margin: 0; font-size: 1.2rem;"><strong>Total Geral:</strong> _____ / 124 pontos</p>
+        <p style="margin: 5px 0 0 0; color: #666;"><em>Etapas 1-7: 12 pontos cada | Etapa 8: 40 pontos</em></p>
+    </div>
+</body>
+</html> 

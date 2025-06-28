@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubrica - Competição AGRINHO 2025</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 300;
+        }
+        
+        .header h2 {
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+        
+        .header h2::before {
+            content: "▶ ";
+            color: #81C784;
+            margin-right: 5px;
+        }
+        
+        .project-info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-left: 5px solid #9C27B0;
+        }
+        
+        .project-title {
+            color: #9C27B0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .student-fields {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 10px;
+        }
+        
+        .field {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .field span {
+            font-weight: 600;
+            color: #333;
+            min-width: 80px;
+        }
+        
+        .field-line {
+            flex: 1;
+            border-bottom: 2px solid #333;
+            min-height: 20px;
+        }
+        
+        .rubric-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        
+        .rubric-table th,
+        .rubric-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .rubric-table th {
+            background: #E8F5E8;
+            font-weight: 600;
+            text-align: center;
+            color: #2e7d32;
+        }
+        
+        .habilidade-cell {
+            background: #E8F5E8;
+            font-weight: 600;
+            width: 200px;
+            color: #2e7d32;
+        }
+        
+        .criterio-cell {
+            background: #F0F8F0;
+            font-weight: 600;
+            width: 140px;
+            color: #388e3c;
+        }
+        
+        .nivel-cell {
+            width: 180px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        .nivel1 { background: #FFEBEE; }
+        .nivel2 { background: #FFF3E0; }
+        .nivel3 { background: #E8F5E8; }
+        .nivel4 { background: #E3F2FD; }
+        
+        .desempenho-cell {
+            background: #F3E5F5;
+            width: 100px;
+            text-align: center;
+        }
+        
+        .codigo-habilidade {
+            font-size: 0.75rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        
+        .resultado-section {
+            background: #E8F5E8;
+            padding: 25px;
+            text-align: center;
+            border-top: 3px solid #4CAF50;
+        }
+        
+        .resultado-section h3 {
+            color: #2e7d32;
+            margin: 0 0 15px 0;
+            font-size: 1.3rem;
+        }
+        
+        .anotacoes-section {
+            padding: 25px;
+            background: #fafafa;
+        }
+        
+        .anotacoes-section h3 {
+            color: #555;
+            margin: 0 0 15px 0;
+        }
+        
+        .lines {
+            height: 150px;
+            background-image: repeating-linear-gradient(
+                transparent,
+                transparent 24px,
+                #ddd 24px,
+                #ddd 26px
+            );
+        }
+        
+        @media print {
+            body { 
+                background: white; 
+                padding: 0; 
+            }
+            .container { 
+                box-shadow: none; 
+                border-radius: 0; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rubrica de aprendizagem</h1>
+            <h2>Lógica de programação: Primeira Competição de Programação com IA CEAG 2025</h2>
+        </div>
+        
+        <div class="project-info">
+            <div class="project-title">Projeto: Primeira Competição de Programação com IA CEAG 2025</div>
+            <div class="student-fields">
+                <div class="field">
+                    <span>Estudante:</span>
+                    <div class="field-line"></div>
+                </div>
+                <div class="field">
+                    <span>Turma:</span>
+                    <div class="field-line"></div>
+                </div>
+            </div>
+        </div>
+        
+        <table class="rubric-table">
+            <thead>
+                <tr>
+                    <th>Habilidades</th>
+                    <th>Critérios</th>
+                    <th>Nível 1 (pré-iniciante)</th>
+                    <th>Nível 2 (iniciante)</th>
+                    <th>Nível 3 (intermediário)</th>
+                    <th>Nível 4 (proficiente)</th>
+                    <th>Desempenho</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ALGORITMOS -->
+                <tr>
+                    <td rowspan="4" class="habilidade-cell">
+                        <strong>Algoritmos</strong>
+                        <div class="codigo-habilidade">(EF0C002)</div>
+                        Elaborar algoritmos que envolvam instruções sequenciais, de repetição e de seleção usando uma linguagem de programação.
+                    </td>
+                    <td class="criterio-cell">Entrada e Saída de dados</td>
+                    <td class="nivel-cell nivel1">O estudante não conseguiu implementar entrada/saída básica ou o programa não funciona.</td>
+                    <td class="nivel-cell nivel2">O estudante implementou entrada/saída simples (nome, idade) mas com dificuldades.</td>
+                    <td class="nivel-cell nivel3">O estudante criou entrada/saída funcional com mensagens personalizadas.</td>
+                    <td class="nivel-cell nivel4">O estudante implementou entrada/saída sofisticada com validação e tratamento de erros.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Operações e condicionais</td>
+                    <td class="nivel-cell nivel1">Não implementou operações matemáticas ou condicionais (par/ímpar).</td>
+                    <td class="nivel-cell nivel2">Implementou operações básicas ou condicionais simples com erros.</td>
+                    <td class="nivel-cell nivel3">Criou operações matemáticas e condicionais funcionais corretamente.</td>
+                    <td class="nivel-cell nivel4">Demonstrou domínio avançado em operações e lógica condicional complexa.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Estruturas de repetição</td>
+                    <td class="nivel-cell nivel1">Não utilizou loops ou estruturas de repetição.</td>
+                    <td class="nivel-cell nivel2">Criou loops básicos (1 a 10) mas com dificuldades na implementação.</td>
+                    <td class="nivel-cell nivel3">Implementou loops funcionais e aplicou em diferentes contextos.</td>
+                    <td class="nivel-cell nivel4">Utilizou estruturas de repetição avançadas e otimizadas eficientemente.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Listas e Funções</td>
+                    <td class="nivel-cell nivel1">Não trabalhou com listas/arrays nem criou funções.</td>
+                    <td class="nivel-cell nivel2">Utilizou listas básicas (5 números) ou funções simples com limitações.</td>
+                    <td class="nivel-cell nivel3">Trabalhou adequadamente com listas e criou funções funcionais.</td>
+                    <td class="nivel-cell nivel4">Demonstrou domínio em estruturas de dados e funções bem organizadas.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                
+                <!-- TEMA AGRINHO -->
+                <tr>
+                    <td rowspan="3" class="habilidade-cell">
+                        <strong>Aplicação Temática</strong>
+                        <div class="codigo-habilidade">(EF69AR06)</div>
+                        Desenvolver projetos que explorem criativamente os temas "alimentação saudável" e "do campo à cidade".
+                    </td>
+                    <td class="criterio-cell">Mini-projeto temático</td>
+                    <td class="nivel-cell nivel1">Não desenvolveu mini-projeto ou projeto não relacionado ao tema AGRINHO.</td>
+                    <td class="nivel-cell nivel2">Criou projeto básico relacionado ao tema (calculadora simples de frutas).</td>
+                    <td class="nivel-cell nivel3">Desenvolveu projeto funcional e relevante (simulador de transporte, quiz alimentação).</td>
+                    <td class="nivel-cell nivel4">Criou projeto inovador e impactante relacionado ao tema (visualização de dados, sistema completo).</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Conexão tema-código</td>
+                    <td class="nivel-cell nivel1">O código não demonstra conexão com alimentação saudável ou cadeia produtiva.</td>
+                    <td class="nivel-cell nivel2">O projeto menciona o tema mas sem integração significativa ao código.</td>
+                    <td class="nivel-cell nivel3">O código está bem integrado ao tema, processando dados relevantes.</td>
+                    <td class="nivel-cell nivel4">Demonstrou conexão profunda entre programação e problemáticas reais do agronegócio.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Potencial educativo</td>
+                    <td class="nivel-cell nivel1">O projeto não ensina ou informa sobre alimentação/agricultura.</td>
+                    <td class="nivel-cell nivel2">O projeto contém informações básicas sobre o tema.</td>
+                    <td class="nivel-cell nivel3">O projeto é educativo e pode conscientizar sobre alimentação saudável.</td>
+                    <td class="nivel-cell nivel4">O projeto tem alto potencial para educar e transformar hábitos alimentares.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                
+                <!-- APRESENTAÇÃO -->
+                <tr>
+                    <td rowspan="3" class="habilidade-cell">
+                        <strong>Recursos e ferramentas</strong>
+                        <div class="codigo-habilidade">(EF69AR06)</div>
+                        Desenvolver processos de criação com linguagens digitais, explorando recursos convencionais e experimentais.
+                    </td>
+                    <td class="criterio-cell">Repositório GitHub</td>
+                    <td class="nivel-cell nivel1">Não publicou projeto ou repositório muito mal organizado.</td>
+                    <td class="nivel-cell nivel2">Repositório básico com código, mas sem README ou organização.</td>
+                    <td class="nivel-cell nivel3">Repositório bem organizado com README explicativo e código comentado.</td>
+                    <td class="nivel-cell nivel4">Repositório profissional com documentação completa, capturas de tela e instruções detalhadas.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Organização do código</td>
+                    <td class="nivel-cell nivel1">Código desorganizado, sem comentários, difícil de entender.</td>
+                    <td class="nivel-cell nivel2">Código parcialmente organizado, alguns comentários, mas ainda confuso.</td>
+                    <td class="nivel-cell nivel3">Código bem estruturado, comentado adequadamente e fácil de seguir.</td>
+                    <td class="nivel-cell nivel4">Código exemplar seguindo boas práticas, muito bem documentado e organizado.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Apresentação oral</td>
+                    <td class="nivel-cell nivel1">Apresentação confusa, sem preparação, dificuldade para explicar o projeto.</td>
+                    <td class="nivel-cell nivel2">Apresentação básica, explica funcionalidades principais mas com limitações.</td>
+                    <td class="nivel-cell nivel3">Apresentação clara, demonstra bem o projeto e explica conceitos.</td>
+                    <td class="nivel-cell nivel4">Apresentação excepcional, envolvente, demonstrando domínio técnico e boa comunicação.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                
+                <!-- ORIGINALIDADE -->
+                <tr>
+                    <td rowspan="2" class="habilidade-cell">
+                        <strong>Originalidade</strong>
+                        <br>
+                        Desenvolver ideias criativas e soluções inovadoras na programação.
+                    </td>
+                    <td class="criterio-cell">Criatividade e inovação</td>
+                    <td class="nivel-cell nivel1">Projeto muito básico, cópia de exemplos sem modificações criativas.</td>
+                    <td class="nivel-cell nivel2">Projeto com algumas modificações próprias, mas ainda baseado em exemplos.</td>
+                    <td class="nivel-cell nivel3">Projeto com ideias originais e implementação criativa do tema.</td>
+                    <td class="nivel-cell nivel4">Projeto altamente original, inovador, demonstrando criatividade excepcional e soluções únicas.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+                <tr>
+                    <td class="criterio-cell">Interface e experiência</td>
+                    <td class="nivel-cell nivel1">Interface muito básica, apenas texto, difícil de usar.</td>
+                    <td class="nivel-cell nivel2">Interface simples mas funcional, interação básica com usuário.</td>
+                    <td class="nivel-cell nivel3">Interface bem projetada, intuitiva e agradável de usar.</td>
+                    <td class="nivel-cell nivel4">Interface profissional, atrativa e com excelente experiência do usuário.</td>
+                    <td class="desempenho-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="resultado-section">
+            <h3>Resultado</h3>
+            <p><strong>Pontuação Total:</strong> ______ / 48 pontos &nbsp;&nbsp;&nbsp; <strong>Conceito Final:</strong> ______________</p>
+        </div>
+        
+        <div class="anotacoes-section">
+            <h3>Anotações</h3>
+            <div class="lines"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 ETAPAS PARA ESPECIALIZAÇÃO NA LINGUAGEM ESCOLHIDA
-Competição de Programação 2025 - CEAG
+Primeira Competição de Programação com IA CEAG 2025
 
 As atividades abaixo devem ser realizadas na linguagem escolhida pelo aluno. Todas as etapas são compatíveis com Java, JavaScript, C#, p5.js e Python.
 

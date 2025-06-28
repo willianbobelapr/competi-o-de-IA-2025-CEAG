@@ -1,4 +1,5 @@
 # Projeto: Hello World Web Criativo
+## Primeira Competição de Programação com IA CEAG 2025
 
 Este projeto apresenta uma página web profissional, elegante e criativa que exibe o texto "Hello World" com técnicas modernas de web design. O objetivo é demonstrar boas práticas de organização, responsividade, tipografia sofisticada, uso de gradientes, animações e minimalismo com personalidade.
 
@@ -20,7 +21,7 @@ Este projeto apresenta uma página web profissional, elegante e criativa que exi
 ```
 
 ## Sobre a pasta `site`
-A pasta `site` contém um mini-site educativo voltado para alunos do Ensino Médio Profissional em Análise de Projeto de Sistemas do Colégio Estadual Alto da Glória. O objetivo é apresentar as principais linguagens de programação disponíveis para especialização na competição escolar, além de fornecer informações importantes como:
+A pasta `site` contém um mini-site educativo voltado para alunos do Ensino Médio Profissional em Análise de Projeto de Sistemas do Colégio Estadual Alto da Glória. O objetivo é apresentar as principais linguagens de programação disponíveis para especialização na **Primeira Competição de Programação com IA CEAG 2025**, além de fornecer informações importantes como:
 
 - **Resumo e características de cada linguagem** (Java, JavaScript, C#, p5.js, Python)
 - **Regras detalhadas da competição** (`regras_competicao.txt`)
@@ -46,7 +47,7 @@ O mini-site pode ser acessado abrindo o `site/index.html` em qualquer navegador.
 
 ## Como Visualizar
 1. Navegue até a pasta `javascript` e abra o arquivo `index.html` para ver a página "Hello World" criativa.
-2. Navegue até a pasta `site` e abra o arquivo `index.html` para acessar o mini-site educativo sobre linguagens e a competição.
+2. Navegue até a pasta `site` e abra o arquivo `index.html` para acessar o mini-site educativo sobre linguagens e a Primeira Competição de Programação com IA CEAG 2025.
 3. Não é necessário servidor ou instalação de dependências.
 
 ## Personalização

@@ -1,6 +1,6 @@
-# Linguagens de Programação — Resumo e Competição 2025
+# Linguagens de Programação — Resumo e Primeira Competição de Programação com IA CEAG 2025
 
-Este site apresenta um resumo das principais linguagens de programação utilizadas no desenvolvimento moderno, com foco na preparação dos alunos para a **Competição de Programação 2025** do Colégio Estadual Alto da Glória (CEAG).
+Este site apresenta um resumo das principais linguagens de programação utilizadas no desenvolvimento moderno, com foco na preparação dos alunos para a **Primeira Competição de Programação com IA CEAG 2025** do Colégio Estadual Alto da Glória (CEAG).
 
 ## Objetivo
 O site serve como material de apoio para que os alunos do Ensino Médio Profissional em Análise de Projeto de Sistemas conheçam as linguagens disponíveis para especialização e obtenham informações essenciais para a escolha.
@@ -29,9 +29,9 @@ O site serve como material de apoio para que os alunos do Ensino Médio Profissi
 2. Abra o arquivo `index.html` em seu navegador.
 3. Navegue pelos cards para conhecer as linguagens e acessar links úteis.
 
-## Contexto: Competição de Programação 2025
+## Contexto: Primeira Competição de Programação com IA CEAG 2025
 - **Período:** Outubro a dezembro de 2025
-- **Tema obrigatório:**
+- **Tema AGRINHO 2025:**
   - "Como a comida do campo chega à cidade"
   - "Alimentação Saudável"
 - **Regras principais:**

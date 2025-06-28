@@ -1,4 +1,4 @@
-REGRAS DA COMPETIÇÃO DE PROGRAMAÇÃO 2025
+REGRAS DA PRIMEIRA COMPETIÇÃO DE PROGRAMAÇÃO COM IA CEAG 2025
 Colégio Estadual Alto da Glória
 Ensino Médio Profissional - Análise de Projeto de Sistemas
 
@@ -10,7 +10,7 @@ Ensino Médio Profissional - Análise de Projeto de Sistemas
 - A escolha deve ser comunicada ao professor.
 
 3. TEMA OBRIGATÓRIO
-- O projeto deve obrigatoriamente abordar o tema do AGRINHO 2025:
+- O projeto deve obrigatoriamente abordar o tema AGRINHO 2025:
   • "Como a comida do campo chega à cidade"
   • "Alimentação Saudável"
 - Os alunos devem explorar, em seus projetos, ideias, soluções ou reflexões relacionadas a esses temas.
@@ -21,7 +21,7 @@ Ensino Médio Profissional - Análise de Projeto de Sistemas
 - O repositório deve conter todo o código-fonte, arquivos necessários para execução e, se possível, um arquivo README explicando o projeto.
 
 5. PERÍODO DA COMPETIÇÃO
-- A competição ocorrerá entre outubro e dezembro de 2025.
+- A Primeira Competição de Programação com IA CEAG 2025 ocorrerá entre outubro e dezembro de 2025.
 
 6. DESAFIOS E PROJETOS
 - Serão propostos desafios e/ou projetos práticos para serem resolvidos utilizando a linguagem escolhida.
