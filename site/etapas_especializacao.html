@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etapas para Especialização - Competição de Programação CEAG 2025</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+            font-weight: 300;
+        }
+        
+        .header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #2196F3;
+        }
+        
+        .etapa {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #fafafa;
+            border-radius: 12px;
+            border-left: 4px solid #4CAF50;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .etapa:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .etapa-numero {
+            color: #2e7d32;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .etapa-numero::before {
+            content: "📝";
+            font-size: 1.5rem;
+        }
+        
+        .etapa-descricao {
+            color: #424242;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .exemplos {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #ff9800;
+            margin-top: 15px;
+        }
+        
+        .exemplos h4 {
+            color: #ef6c00;
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .exemplos ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .exemplos li {
+            margin-bottom: 5px;
+            color: #5d4037;
+        }
+        
+        .final-note {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+            border: 2px solid #4CAF50;
+        }
+        
+        .final-note p {
+            margin: 0;
+            color: #2e7d32;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .linguagens {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        
+        .linguagem {
+            background: #e1f5fe;
+            color: #0277bd;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #81d4fa;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            .header {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .content {
+                padding: 20px;
+            }
+            .etapa {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Etapas para Especialização</h1>
+            <p>Primeira Competição de Programação com IA CEAG 2025</p>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <p><strong>📌 Instruções:</strong> As atividades abaixo devem ser realizadas na linguagem escolhida pelo aluno. Todas as etapas são compatíveis com as linguagens disponíveis:</p>
+                <div class="linguagens">
+                    <span class="linguagem">Java</span>
+                    <span class="linguagem">JavaScript</span>
+                    <span class="linguagem">C#</span>
+                    <span class="linguagem">p5.js</span>
+                    <span class="linguagem">Python</span>
+                </div>
+            </div>
+            
+            <div class="etapa">
+                <div class="etapa-numero">1. OLÁ, MUNDO!</div>
+                <div class="etapa-descricao">
+                    Escreva um programa que exiba a mensagem "Olá, Mundo!" na tela.
+                </div>
+            </div>
+            
+            <div class="etapa">
+                <div class="etapa-numero">2. ENTRADA E SAÍDA DE DADOS</div>
+                <div class="etapa-descricao">
+                    Crie um programa que solicite ao usuário seu nome e idade, e exiba uma mensagem personalizada de boas-vindas.
+                </div>
+            </div>
+            
+            <div class="etapa">
+                <div class="etapa-numero">3. OPERAÇÕES BÁSICAS</div>
+                <div class="etapa-descricao">
+                    Desenvolva um programa que leia dois números e mostre a soma, subtração, multiplicação e divisão entre eles.
+                </div>
+            </div>
+            
+            <div class="etapa">
+                <div class="etapa-numero">4. ESTRUTURAS CONDICIONAIS</div>
+                <div class="etapa-descricao">
+                    Faça um programa que leia um número e informe se ele é par ou ímpar.
+                </div>
+            </div>
+            
+            <div class="etapa">
+                <div class="etapa-numero">5. ESTRUTURAS DE REPETIÇÃO</div>
+                <div class="etapa-descricao">
+                    Escreva um programa que exiba os números de 1 a 10 utilizando uma estrutura de repetição (laço/loop).
+                </div>
+            </div>
+            
+            <div class="etapa">
+                <div class="etapa-numero">6. LISTAS/VETORES</div>
+                <div class="etapa-descricao">
+                    Crie um programa que leia 5 números e armazene em uma lista (ou vetor), depois exiba todos os números digitados.
+                </div>
+            </div>
+            
+            <div class="etapa">
+                <div class="etapa-numero">7. FUNÇÕES/PROCEDIMENTOS</div>
+                <div class="etapa-descricao">
+                    Implemente uma função que receba um número e retorne o dobro desse número. Mostre o resultado na tela.
+                </div>
+            </div>
+            
+            <div class="etapa">
+                <div class="etapa-numero">8. MINI-PROJETO TEMÁTICO</div>
+                <div class="etapa-descricao">
+                    Proponha um pequeno projeto relacionado ao tema "Como a comida do campo chega à cidade" ou "Alimentação Saudável".
+                </div>
+                <div class="exemplos">
+                    <h4>💡 Exemplos de Projetos:</h4>
+                    <ul>
+                        <li>Calculadora de consumo de frutas e verduras</li>
+                        <li>Simulador de transporte de alimentos do campo para a cidade</li>
+                        <li>Quiz sobre alimentação saudável</li>
+                        <li>Visualização gráfica de dados sobre produção agrícola (pode ser simples)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="final-note">
+                <p>🚀 Essas etapas ajudarão você a se familiarizar com a linguagem escolhida e a desenvolver habilidades essenciais para a competição!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
