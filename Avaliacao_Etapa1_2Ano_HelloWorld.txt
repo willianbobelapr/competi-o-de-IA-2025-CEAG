@@ -1,0 +1,356 @@
+===============================================================================
+           AVALIAÇÃO ETAPA 1: OLÁ, MUNDO! - HELLO WORLD
+         PRIMEIRA COMPETIÇÃO DE PROGRAMAÇÃO COM IA CEAG 2025
+                                2º ANO
+===============================================================================
+
+CRITÉRIOS DE AVALIAÇÃO (Total: 12 pontos):
+1. Funcionamento (4 pontos) - Programa executa e exibe mensagem corretamente
+2. Código (4 pontos) - Organização, clareza e boas práticas
+3. Criatividade (4 pontos) - Elementos visuais, inovação e tema AGRINHO
+
+===============================================================================
+
+AVALIAÇÃO INDIVIDUAL DOS ALUNOS:
+
+===============================================================================
+1. ALUNO: CARLA
+===============================================================================
+Projeto: Creative Hello World with p5.js - Sistema de Partículas Interativo
+
+FUNCIONAMENTO: 4/4 pontos
+✅ Programa executa perfeitamente
+✅ Sistema de partículas funcional (p5.js)
+✅ Interação por clique implementada
+✅ Canvas responsivo e bem configurado
+
+CÓDIGO: 4/4 pontos
+✅ Código exemplar com README detalhado
+✅ Estrutura p5.js bem implementada
+✅ Uso adequado de funções setup() e draw()
+✅ Código limpo e bem documentado
+✅ Boas práticas de programação
+
+CRIATIVIDADE: 4/4 pontos
+✅ Sistema de partículas dinâmicas
+✅ Interação criativa com mouse/clique
+✅ Efeitos visuais bem elaborados
+✅ Uso criativo da biblioteca p5.js
+✅ Design visual atrativo
+✅ Projeto se destaca pela inovação
+
+TOTAL: 12/12 pontos
+NOTA: 10,0
+
+===============================================================================
+2. ALUNO: VITORIA
+===============================================================================
+Projeto: Hello World Responsivo - Interface Web Moderna
+
+FUNCIONAMENTO: 4/4 pontos
+✅ Programa executa perfeitamente
+✅ Interface responsiva funcional
+✅ Animações web bem implementadas
+✅ Compatibilidade cross-browser
+
+CÓDIGO: 3/4 pontos
+✅ Código bem estruturado
+✅ Separação adequada HTML/CSS/JS
+✅ Design responsivo implementado
+✅ Uso de media queries
+❌ Poderia ter mais comentários explicativos
+
+CRIATIVIDADE: 4/4 pontos
+✅ Design moderno e atrativo
+✅ Animações CSS bem elaboradas
+✅ Layout responsivo criativo
+✅ Elementos visuais diferenciados
+✅ Boa estética visual
+✅ Interface user-friendly
+
+TOTAL: 11/12 pontos
+NOTA: 9,2
+
+===============================================================================
+3. ALUNO: LUCAS
+===============================================================================
+Projeto: HelloWorldGUI - Aplicação Desktop em C#
+
+FUNCIONAMENTO: 4/4 pontos
+✅ Aplicação GUI funcional
+✅ Interface gráfica bem implementada
+✅ Programa executa corretamente
+✅ Abordagem diferente (desktop ao invés de web)
+
+CÓDIGO: 3/4 pontos
+✅ Estrutura de projeto .NET adequada
+✅ Uso correto da linguagem C#
+✅ Organização de arquivos apropriada
+✅ Implementação de interface gráfica
+❌ Documentação limitada
+
+CRIATIVIDADE: 3/4 pontos
+✅ Abordagem inovadora (GUI desktop)
+✅ Diferente dos projetos web tradicionais
+✅ Interface gráfica ao invés de console
+❌ Design visual básico
+❌ Funcionalidades limitadas
+
+TOTAL: 10/12 pontos
+NOTA: 8,3
+
+===============================================================================
+4. ALUNO: DOUGLAS
+===============================================================================
+Projeto: Hello World em Python - Console Application
+
+FUNCIONAMENTO: 4/4 pontos
+✅ Programa executa corretamente
+✅ Exibe mensagem adequadamente
+✅ Código Python funcional
+✅ Execução sem erros
+
+CÓDIGO: 3/4 pontos
+✅ Estrutura Python bem organizada
+✅ Sintaxe correta
+✅ Código limpo e funcional
+✅ Lógica adequada
+❌ Falta documentação mais detalhada
+
+CRIATIVIDADE: 3/4 pontos
+✅ Implementação em Python demonstra versatilidade
+✅ Código bem estruturado
+✅ Abordagem funcional
+❌ Funcionalidades básicas
+❌ Poucos elementos diferenciadores visuais
+
+TOTAL: 10/12 pontos
+NOTA: 8,3
+
+===============================================================================
+5. ALUNO: DIRCEU
+===============================================================================
+Projeto: Hello World Web Básico - JavaScript/HTML/CSS
+
+FUNCIONAMENTO: 3/4 pontos
+✅ Página web funcional
+✅ Estrutura básica implementada
+✅ Scripts funcionais
+❌ Algumas funcionalidades básicas
+
+CÓDIGO: 3/4 pontos
+✅ Separação adequada de arquivos (HTML, CSS, JS)
+✅ Código organizado
+✅ Estrutura de projeto adequada
+❌ Comentários limitados
+
+CRIATIVIDADE: 3/4 pontos
+✅ Elementos básicos de estilo
+✅ Interação simples implementada
+✅ Layout básico organizado
+❌ Funcionalidades visuais limitadas
+❌ Design simples
+
+TOTAL: 9/12 pontos
+NOTA: 7,5
+
+===============================================================================
+6. ALUNO: LAYNE
+===============================================================================
+Projeto: Hello World em Python - Aplicação Console
+
+FUNCIONAMENTO: 3/4 pontos
+✅ Programa executa adequadamente
+✅ Funcionalidade básica implementada
+✅ Código Python funcional
+❌ Algumas limitações menores
+
+CÓDIGO: 3/4 pontos
+✅ Código organizado
+✅ Estrutura Python adequada
+✅ Implementação básica correta
+❌ Documentação básica
+
+CRIATIVIDADE: 3/4 pontos
+✅ Implementação em Python
+✅ Código estruturado
+✅ Abordagem funcional
+❌ Funcionalidades limitadas
+❌ Poucas inovações além do básico
+
+TOTAL: 9/12 pontos
+NOTA: 7,5
+
+===============================================================================
+7. ALUNO: AGENOR
+===============================================================================
+Projeto: Hello World em Python - Implementação Básica
+
+FUNCIONAMENTO: 3/4 pontos
+✅ Programa funcional
+✅ Execução adequada
+✅ Código Python implementado
+❌ Funcionalidades básicas
+
+CÓDIGO: 3/4 pontos
+✅ Código organizado
+✅ Estrutura Python adequada
+✅ Implementação correta
+❌ Comentários limitados
+
+CRIATIVIDADE: 3/4 pontos
+✅ Uso da linguagem Python
+✅ Código funcional
+✅ Implementação básica adequada
+❌ Design simples
+❌ Poucas funcionalidades criativas
+
+TOTAL: 9/12 pontos
+NOTA: 7,5
+
+===============================================================================
+8. ALUNO: TAIS
+===============================================================================
+Projeto: Hello World - Projeto Web Simples
+
+FUNCIONAMENTO: 3/4 pontos
+✅ Programa executa corretamente
+✅ Funcionalidade básica implementada
+✅ Estrutura web adequada
+❌ Algumas limitações
+
+CÓDIGO: 2/4 pontos
+✅ Estrutura básica implementada
+✅ Arquivos organizados
+❌ Código poderia ser mais limpo
+❌ Documentação limitada
+
+CRIATIVIDADE: 3/4 pontos
+✅ Elementos visuais básicos
+✅ Formatação implementada
+✅ Layout organizado
+❌ Funcionalidades básicas
+❌ Poucas inovações
+
+TOTAL: 8/12 pontos
+NOTA: 6,7
+
+===============================================================================
+9. ALUNO: ERIK
+===============================================================================
+Projeto: Hello World em C# - Console Application
+
+FUNCIONAMENTO: 3/4 pontos
+✅ Programa funcional
+✅ Execução básica correta
+✅ Aplicação C# implementada
+❌ Funcionalidades limitadas
+
+CÓDIGO: 2/4 pontos
+✅ Estrutura C# básica adequada
+✅ Implementação funcional
+❌ Organização poderia ser melhor
+❌ Comentários limitados
+
+CRIATIVIDADE: 3/4 pontos
+✅ Uso da linguagem C#
+✅ Aplicação console funcional
+✅ Implementação adequada
+❌ Design simples
+❌ Poucas funcionalidades criativas
+
+TOTAL: 8/12 pontos
+NOTA: 6,7
+
+===============================================================================
+10. ALUNO: NATHANAEL
+===============================================================================
+Projeto: Hello World em C# - Projeto Básico
+
+FUNCIONAMENTO: 2/4 pontos
+✅ Programa executa com limitações
+✅ Funcionalidade básica implementada
+❌ Algumas funcionalidades incompletas
+❌ Execução com problemas menores
+
+CÓDIGO: 2/4 pontos
+✅ Estrutura C# básica presente
+✅ Implementação inicial
+❌ Código desorganizado
+❌ Falta de documentação
+
+CRIATIVIDADE: 2/4 pontos
+✅ Implementação básica presente
+✅ Uso da linguagem C#
+❌ Funcionalidades muito limitadas
+❌ Design muito simples
+
+TOTAL: 6/12 pontos
+NOTA: 5,0
+
+===============================================================================
+RESUMO GERAL DA TURMA - 2º ANO:
+===============================================================================
+
+ESTATÍSTICAS:
+- Nota 10,0: 1 aluno (10%)
+- Nota 9,2: 1 aluno (10%)
+- Nota 8,3: 2 alunos (20%)
+- Nota 7,5: 3 alunos (30%)
+- Nota 6,7: 2 alunos (20%)
+- Nota 5,0: 1 aluno (10%)
+
+MÉDIA DA TURMA: 7,8
+
+DISTRIBUIÇÃO POR CONCEITOS:
+- Conceito A (8,5-10,0): 4 alunos (40%)
+- Conceito B (7,0-8,4): 3 alunos (30%)
+- Conceito C (5,5-6,9): 2 alunos (20%)
+- Conceito D (0,0-5,4): 1 aluno (10%)
+
+PONTOS FORTES IDENTIFICADOS:
+✅ Todos os alunos conseguiram criar projetos funcionais
+✅ Diversidade de linguagens utilizadas (p5.js, Python, C#, HTML/CSS/JS)
+✅ Demonstração de compreensão dos conceitos básicos
+✅ Alguns projetos mostraram criatividade notável
+✅ Abordagens diferentes para o mesmo problema
+
+ÁREAS PARA MELHORIA:
+📝 Documentação e comentários no código precisam ser melhorados
+📝 Alguns projetos poderiam ter mais funcionalidades criativas
+📝 Organização do código pode ser aprimorada
+📝 Oportunidade de explorar mais o tema AGRINHO 2025
+📝 Alguns alunos precisam de apoio adicional
+
+DESTAQUES ESPECIAIS:
+🏆 CARLA: Excelente uso de p5.js com sistema de partículas interativo
+🏆 VITORIA: Design responsivo bem implementado e interface moderna
+🏆 LUCAS: Abordagem inovadora com aplicação desktop em C#
+
+COMPARAÇÃO COM 3º ANO:
+- 3º Ano: Média 9,4 (Excelente)
+- 2º Ano: Média 7,8 (Bom)
+- Diferença: 1,6 pontos (esperada devido ao nível de experiência)
+
+RECOMENDAÇÕES PARA PRÓXIMAS ETAPAS:
+1. Incentivar mais documentação e comentários no código
+2. Explorar conexões criativas com o tema AGRINHO
+3. Apoio individualizado para alunos com dificuldades
+4. Workshops sobre organização de código e boas práticas
+5. Incentivar experimentação com diferentes tecnologias
+6. Promover colaboração entre alunos mais e menos experientes
+
+OBSERVAÇÕES GERAIS:
+A turma do 2º ano demonstrou potencial significativo, com alguns alunos 
+se destacando pela criatividade e implementação técnica. Embora a média 
+seja menor que a do 3º ano, isso é esperado considerando o nível de 
+experiência. Há espaço para crescimento, especialmente nas áreas de 
+documentação e criatividade. O fato de todos os alunos terem conseguido 
+criar projetos funcionais é muito positivo.
+
+===============================================================================
+Avaliação realizada em: [DATA]
+Professor(a): Willian Bobela
+Turma: 2º Ano - Ensino Médio Profissional em Análise de Projeto de Sistemas
+Colégio: CEAG - Colégio Estadual Alto da Glória
+=============================================================================== 
